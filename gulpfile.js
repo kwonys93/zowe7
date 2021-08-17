@@ -17,8 +17,8 @@ gulp.task("task", function (cb) {
 gulp.task("update-cobol", function (callback) {
   //   var command = "zowe endevor generate element " + config.testElement + " --type COBOL --override-signout --maxrc 0 --stage-number 1";
   var command =
-    "zowe  endevor update element MARBLE01 --env SMPLTEST --sys MARBLES --sub MARBLES --typ COBOL --override-signout --ff COBOL/MARBLE01.cobol -i ENDEVOR --comment ysk1 --ccid ysk1";
-  //    "zowe  endevor update element MARBLE01 --env SMPLTEST --sys MARBLES --sub MARBLES --typ COBOL --override-signout --ff MARBLE01.cbl -i ENDEVOR --comment ysk1 --ccid ysk1";
+    "zowe  endevor update element MARBLE07 --env SMPLTEST --sys MARBLES --sub MARBLES --typ COBOL --override-signout --ff COBOL/MARBLE07.cobol -i ENDEVOR --comment ysk1 --ccid ysk1";
+  //    "zowe  endevor update element MARBLE07 --env SMPLTEST --sys MARBLES --sub MARBLES --typ COBOL --override-signout --ff MARBLE07.cbl -i ENDEVOR --comment ysk1 --ccid ysk1";
 
   simpleCommand(command, "command-archive/update-cobol", callback);
 });
@@ -26,20 +26,20 @@ gulp.task("update-cobol", function (callback) {
 gulp.task("build-cobol", function (callback) {
   //   var command = "zowe endevor generate element " + config.testElement + " --type COBOL --override-signout --maxrc 0 --stage-number 1";
   var command =
-    "zowe endevor generate element MARBLE01 --env SMPLTEST --sn 1 --sys MARBLES --sub MARBLES --type COBOL --override-signout --cb -i ENDEVOR --comment test223 --ccid abcd";
+    "zowe endevor generate element MARBLE07 --env SMPLTEST --sn 1 --sys MARBLES --sub MARBLES --type COBOL --override-signout --cb -i ENDEVOR --comment test223 --ccid abcd";
 
   simpleCommand(command, "command-archive/build-cobol", callback);
 });
 
 //    var command = "zowe endevor generate element " + config.testElement + " --type COBOL --override-signout --maxrc 0 --stage-number 1";
-//var command = "zowe  endevor update element FINARP05 --env SMPLTEST --sys --sub ACCTPAY --typ COBOL --ff MARBLE01.cbl -i ENDEVOR --comment test9 --ccid abcd9";
+//var command = "zowe  endevor update element FINARP05 --env SMPLTEST --sys --sub ACCTPAY --typ COBOL --ff MARBLE07.cbl -i ENDEVOR --comment test9 --ccid abcd9";
 //var  command = "zowe endevor generate element FAPCOB05 --env SMPLTEST --sn 1 --sys FINANCE --sub ACCTPAY --type COBOL --cb -i ENDEVOR --comment test223 --ccid abcd";
 //     var command = "zowe  endevor list elements -i ENDEVOR --env SMPLTEST --sn 1 --sys FINANCE --sub ACCTPAY --typ COBOL" ;
 
 gulp.task("build-lnk", function (callback) {
   //  var command = "zowe endevor generate element " + config.testElement + " --type LNK --override-signout --maxrc 0 --stage-number 1";
   var command =
-    "zowe endevor generate element MARBLE01 --env SMPLTEST --sn 1 --sys MARBLES --sub MARBLES --type LNK --cb -i ENDEVOR --comment test223 --ccid abcd --os";
+    "zowe endevor generate element MARBLE07 --env SMPLTEST --sn 1 --sys MARBLES --sub MARBLES --type LNK --cb -i ENDEVOR --comment test223 --ccid abcd --os";
   simpleCommand(command, "command-archive/build-lnk", callback);
 });
 
@@ -64,7 +64,7 @@ gulp.task("copy-dbrm", function (callback) {
     config.testDBRMLIB +
     '" -m ' +
     config.testElement;
-  //var command = 'zowe zos-extended-files copy data-set "KWOYO01.MARBLES.DBRMLIB(MARBLE01)" "KWOYO01.MARBLES.T12M.DBRMLIB(MARBLE01)" --replace';
+  //var command = 'zowe zos-extended-files copy data-set "KWOYO01.MARBLES.DBRMLIB(MARBLE07)" "KWOYO01.MARBLES.T12M.DBRMLIB(MARBLE07)" --replace';
 
   simpleCommand(command, "command-archive/copy-dbrm", callback);
 });
