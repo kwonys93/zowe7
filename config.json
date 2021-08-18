@@ -4,7 +4,7 @@
   "sqlJCL": "KWOYO01.MARBLES.JCL(MARBDB7)",
   "cicsConsole": "KWOYO01",
   "cicsPort": 6000,
-  "cicsProgram": "MARBLE01",
+  "cicsProgram": "MARBLE07",
   "cicsProtocol": "http",
   "cicsRegion": "CICS00A1",
   "cicsTran": "MB07",
